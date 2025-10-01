@@ -77,7 +77,7 @@ This project is licensed under the **MIT License** — see [LICENSE](./LICENSE) 
 ## Acknowledgements / Citation
 
 If you use these macros in a publication or pipeline, please cite this GitHub repository.  
-Optionally: include author name(s), year, and link (e.g. _“We used the Fiji-Macros toolkit by Joey Dufourd (2025)”_).
+Optionally: include author name, year, and link (e.g. _“We used the Fiji-Macros toolkit by Joey Dufourd (2025) 'link to the repository'”_).
 
 ---
 
