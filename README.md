@@ -56,7 +56,7 @@ Run `Montage Builder per Channel.ijm`.
 You will be asked to choose an image, then set scalebar size. The macro splits channels, applies color, merges, stacks, and builds a montage (including composite).  
 After finishing, it prompts for save format (tif/png/jpg).
 
-![Montage Builder per Channel example](./assests/example1.jpg)
+![Montage Builder per Channel example](./assets/example1.jpg)
 
 ---
 
