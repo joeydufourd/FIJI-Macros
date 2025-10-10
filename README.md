@@ -18,15 +18,32 @@ Each macro is standalone and designed for easy modification and extension.
 
 ---
 
+## Dependencies
+
+Some macros require specific Fiji plugins to function correctly.  
+Make sure these are available in your Fiji installation:
+
+| Plugin | Purpose | Installation |
+|--------|----------|---------------|
+| **Bio-Formats Importer** | Opens `.dv`, `.lif`, `.czi`, `.nd2`, and other proprietary microscopy formats | Usually preinstalled in Fiji. If missing, enable **Bio-Formats** under *Help → Update → Manage update sites*. |
+| **MultiStackReg** | Performs channel and stack alignment (used in alignment macros) | If missing, add the update site: **MultiStackReg** under *Help → Update → Manage update sites*, then restart Fiji. |
+| **TurboReg** | Backend for MultiStackReg (handles the actual transformations) | Installed automatically with Fiji, might need to enable **BIG-EPFL** under *Help → Update → Manage update sites*. |
+
+To verify installation, check under **Plugins → Registration** that both *TurboReg* and *MultiStackReg* appear.
+
+
+---
+
 ## Macros Included
 
 Here’s a breakdown of the scripts currently in the repo:
 
 | Macro file | Purpose | Key features / notes |
 |------------|---------|------------------------|
-| `TIF_PNG_GIF_ND2_CZI-to_JPG.ijm` | Format conversion | Takes a folder of various image formats and batch-converts to JPG |
-| `Batch-MaxIntensityProjection.ijm` | Batch projection | Automatically opens images, does maximum intensity projection, saves output |
-| `Montage Builder per Channel.ijm` | Montage builder | Splits channels, merges, makes montage per channel plus composite |
+| `TIF_PNG_GIF_ND2_CZI-to_JPG.ijm` | Format conversion | Takes a folder of various image formats and batch-converts to JPG. |
+| `Batch-MaxIntensityProjection.ijm` | Batch projection | Automatically opens images, does maximum intensity projection, saves output.  |
+| `Montage Builder per Channel  (X rows).ijm` | Montage builder | Splits channels, merges, makes montage per channel plus composite with chosen rows. |
+| `Auto Align channels.ijm` | Channel alignment | Automatically imports multi-channel images, splits channels, lets the user choose which channels to align using **MultiStackReg**, aligns them via rigid-body registration, merges all channels back into a single composite, and saves the aligned image in the chosen format. |
 
 You can open each macro in Fiji’s macro editor to view or modify the logic (e.g. LUT assignment, scale bar, saving options).
 
