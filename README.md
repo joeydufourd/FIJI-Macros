@@ -52,7 +52,7 @@ The macro will convert all supported formats to JPG.
 
 ### Montage & Projection
 
-Run `Montage Builder per Channel.ijm`.  
+Run `Montage Builder per Channel (1 row).ijm`.  
 You will be asked to choose an image, then set scalebar size. The macro splits channels, applies color, merges, stacks, and builds a montage (including composite).  
 After finishing, it prompts for save format (tif/png/jpg).
 
