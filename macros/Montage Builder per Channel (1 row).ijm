@@ -41,7 +41,7 @@ for (c = 1; c <= nC; c++) {
     } else if (c == 4) {
         run("Grays");
     }
-    run("RGB Color");
+    //run("RGB Color");
     
     // Add text overlay at top center
     //Overlay.clear();
@@ -58,11 +58,12 @@ args = "";
 for (c = 1; c <= nC; c++) {
     args = args + "c" + c + "=C" + c + "_MIP ";
 }
-args = args + "create keep";   // always add 'create' at the end
+args = args + "create keep";  
 
 run("Merge Channels...", args + " create keep");
+run("Make Composite");
+run("Flatten");
 rename("Composite_MIP");
-run("RGB Color");
 
 selectWindow("C1_MIP");
 getVoxelSize(pixelWidth, pixelHeight, pixelDepth, unit);
